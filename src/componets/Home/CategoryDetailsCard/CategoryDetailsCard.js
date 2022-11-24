@@ -1,12 +1,9 @@
 import React from 'react';
-import {  FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-const PhoneStoreCard = ({ phoneStore }) => {
-    const { price, resalePrice, used, name, img, description, location }=phoneStore
-
-    
-
+const CategoryDetailsCard = ({ category }) => {
+    const { price, resalePrice, used, name, img, description, location }=category;
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-4 overflow-hidden rounded-lg shadow-xl  text-black">
             <div className="flex space-x-4">
@@ -23,10 +20,10 @@ const PhoneStoreCard = ({ phoneStore }) => {
             </div>
             <div className="flex flex-wrap justify-between">
                 <div className="space-x-2">
-                   <Link> <FaArrowLeft className='text-2xl'></FaArrowLeft> </Link>
+                    <Link> <FaArrowLeft className='text-2xl'></FaArrowLeft> </Link>
                 </div>
                 <div className="flex space-x-2 text-sm text-black">
-                    
+
                     <Link> <button>  <FaArrowRight className='text-2xl'></FaArrowRight></button> </Link>
                 </div>
             </div>
@@ -34,4 +31,4 @@ const PhoneStoreCard = ({ phoneStore }) => {
     );
 };
 
-export default PhoneStoreCard;
+export default CategoryDetailsCard;
