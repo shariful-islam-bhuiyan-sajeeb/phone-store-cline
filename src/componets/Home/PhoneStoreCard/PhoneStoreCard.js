@@ -3,9 +3,9 @@ import {  FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const PhoneStoreCard = ({ phoneStore }) => {
-    const { price, resalePrice, used, name, img, description, location }=phoneStore
-
+    const { price, resalePrice, used, name, img, description, location, category }=phoneStore
     
+   
 
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-4 overflow-hidden rounded-lg shadow-xl  text-black">
@@ -27,7 +27,7 @@ const PhoneStoreCard = ({ phoneStore }) => {
                 </div>
                 <div className="flex space-x-2 text-sm text-black">
                     
-                    <Link> <button>  <FaArrowRight className='text-2xl'></FaArrowRight></button> </Link>
+                    <Link to={`/home/category/${category}`}><button >  <FaArrowRight className='text-2xl'></FaArrowRight></button> </Link>
                 </div>
             </div>
         </div>
