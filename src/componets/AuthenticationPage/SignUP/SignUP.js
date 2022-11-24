@@ -85,7 +85,7 @@ const SignUP = () => {
                             )} className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-700'>{errors.password?.message}</p>}
 
-                        <label className="label"><span className="label-text">Image</span></label>
+                        <label className="label"><span className="label-text">Image Upload</span></label>
                         <input type="file"
                             {...register("image",
                                 {
@@ -93,7 +93,7 @@ const SignUP = () => {
                                     
                                 }
 
-                            )} className="input input-bordered w-full max-w-xs" />
+                            )} className=" border-solid border-2 p-6 rounded-lg  w-full max-w-xs" />
                         {errors.image && <p className='text-red-700'>{errors.image?.message}</p>}
                     </div>
                     <input className='btn btn-accent w-full mt-4 mb-4' value='signup' type="submit" />

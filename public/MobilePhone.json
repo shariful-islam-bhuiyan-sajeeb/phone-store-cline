@@ -1,0 +1,74 @@
+[
+    {
+        "category": "Samsung",
+        "price": 75000,
+        "resalePrice": 50000,
+        "used": 1.5,
+        "name": "Samsung Galaxy A50",
+        "ratings": 4.5,
+        "release": 45,
+        "img": "https://thumbs.dreamstime.com/b/samsung-galaxy-s-plus-mobile-phone-taipei-taiwan-march-studio-shot-new-cellphone-reflective-white-surface-141609046.jpg",
+        "discription": "Samsung Galaxy is a series of computing and mobile computing devices that are designed, manufactured and marketed by Samsung Electronics.",
+        "location": "South Korean company"
+    },
+    {
+        "category": "I Phone",
+        "name": "I phone 13 Pro",
+        "price": 115000,
+        "resalePrice" : 85000,
+        "used": 1.5,
+        "ratings": 6.0,
+        "release": 60,
+        "img": "https://media.istockphoto.com/id/1190447864/photo/apple-iphone-11-pro-gray-smartphone.jpg?s=612x612&w=0&k=20&c=zETLJeguLoTEFBNKPl1vjPY1lvPW1uM6GPpyiMSvsC0=",
+        "description": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface..",
+        "location": "Thailand company"
+    },
+    {
+        "category": "Mi",
+        "price": 35000,
+        "resalePrice": 20000,
+        "used": 1,
+        "name": "Mi 11 pro max",
+        "ratings": 3.5,
+        "release": 90,
+        "img": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1619082936.24068801.png",
+        "description": "The in our logo stands for “Mobile Internet”. It also has other meanings, including Mission Impossible, because Xiaomi faced many challenges that had seemed impossible to defy in our early days",
+        "location": "Indian company"
+    },
+    {
+        "category": "Sony",
+        "price": 55000,
+        "resalePrice": 15000,
+        "used": 1.5,
+        "name": "Sony xperia pro-I",
+        "ratings": 4.5,
+        "release": 45,
+        "img": "https://img.giznext.com/assets/model/33/14712/sony-mobiles-sony-xperia-pro-i-0-1635494924.png",
+        "description": "Sony Mobile exclusively created Android-powered smartphones under the Xperia sub-brand name; it also developed tablet computers (Sony Tablet), smartwatches (Sony SmartWatch) and fitness trackers (Sony SmartBand), alongside accessories and software for the devices",
+        "location": "Japan biggest company"
+    },
+    {
+        "category": "HTC",
+        "price": 35000,
+        "resalePrice": 10000,
+        "used": 1.5,
+        "name": "Htc A50 model",
+        "ratings": 6.5,
+        "release": 65,
+        "img": "https://fdn2.gsmarena.com/vv/pics/htc/htc-one-gold.jpg",
+        "description": "Founded in 1997 as a laptop manufacturer, Taiwan-based HTC soon began making smartphones based on Windows Mobile and Brew. It released the first commercial Android smartphone, the HTC Dream, in 2008, and is today a manufacturer of both Android and Windows based smartphones",
+        "location": "Taiwan company"
+    },
+    {
+        "category": "Realme",
+        "price": 22000,
+        "resalePrice":12000,
+        "used": 1.00,
+        "name": "Realme C11 model",
+        "ratings": 4.5,
+        "release": 75,
+        "img": "https://fdn2.gsmarena.com/vv/pics/realme/realme-c11-pepper-grey.jpg",
+        "description": "realme is an emerging mobile phone brand which is committed to offering mobile phones with powerful performance, stylish design and sincere services.",
+        "location": "Chinese smartphone manufacturer"
+    }
+]
