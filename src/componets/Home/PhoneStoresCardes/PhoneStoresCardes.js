@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Loading from '../../Loading/Loading';
+import PhoneStoreCard from '../PhoneStoreCard/PhoneStoreCard';
 
 const PhoneStoresCardes = () => {
 
@@ -19,8 +20,13 @@ if(isLoading){
 
 
     return (
-        <div>
-            <h2>phone Store data {phoneStores.length}</h2>
+        <div className='grid lg:grid-cols-3 md:grid-cols2 grid-cols-1 gap-6'>
+           {
+            phoneStores.map(phoneStore => <PhoneStoreCard
+            key={phoneStore._id}
+            phoneStore={phoneStore}
+            ></PhoneStoreCard> )
+           }
         </div>
     );
 };
