@@ -8,11 +8,28 @@ import { Result } from 'postcss';
 
 const SignUP = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const imageHostKey = process.env.REACT_APP_imgbb_Key 
+   
     const [signUpError, setSignUpError] = useState()
     const { createUser, signInGoogle }= useContext(AuthContext)
 
     const handleSingUP = data =>{
         console.log(data);
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append('image', image)
+        const url =`https://api.imgbb.com/1/upload?expiration=600&key=${imageHostKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(imgData =>{
+           if(imgData.success){
+            console.log(imgData.data.url);
+           }
+        })
+
         createUser(data.email, data.password)
         .then(result =>{
             const user = result.user;
@@ -21,7 +38,9 @@ const SignUP = () => {
         .catch(err =>{
             console.log(err);
         })
+
     }
+
 
     const handleGoogle = () =>{
         signInGoogle()
@@ -61,11 +80,21 @@ const SignUP = () => {
                                 {
                                     required: "password is required",
                                     minLength: { value: 6, message: "password minimum 6 characters long" },
-                                    //  pattern: { value: /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])$/, message: 'must be strong password' }
                                 }
 
                             )} className="input input-bordered w-full max-w-xs" />
                         {errors.password && <p className='text-red-700'>{errors.password?.message}</p>}
+
+                        <label className="label"><span className="label-text">Image</span></label>
+                        <input type="file"
+                            {...register("image",
+                                {
+                                    required: "photo is required",
+                                    
+                                }
+
+                            )} className="input input-bordered w-full max-w-xs" />
+                        {errors.image && <p className='text-red-700'>{errors.image?.message}</p>}
                     </div>
                     <input className='btn btn-accent w-full mt-4 mb-4' value='signup' type="submit" />
 
