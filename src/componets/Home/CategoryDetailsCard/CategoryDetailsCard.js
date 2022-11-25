@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaArrowLeft, FaStar } from "react-icons/fa";
 import BookingModal from '../../BookingModal/BookingModal';
+import { DayPicker } from 'react-day-picker';
+import { format } from 'date-fns';
 
 const CategoryDetailsCard = ({ category }) => {
+    const [selectedDate, setSelectedDate] = useState(new Date());
     const [booking ,setBooking] = useState(null)
     const { price, resalePrice, used_of_year, name, img, description, ratings, release, location } = category;
 
@@ -12,8 +15,8 @@ const CategoryDetailsCard = ({ category }) => {
             <div className="flex space-x-4">
                 <img alt="" src={img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                 <div className="flex flex-col space-y-1">
-                    <a rel="noopener noreferrer" href="#" className="text-sm font-semibold">{name}</a>
-                    <span className="text-xs dark:text-gray-400">4 hours ago</span>
+                    <a rel="noopener noreferrer" href="#" className="text-lg font-semibold">Seller </a>
+                    <span className="text-xs dark:text-black"><p>Date: {format(selectedDate, 'PP')}.</p></span>
                 </div>
             </div>
             <div>
