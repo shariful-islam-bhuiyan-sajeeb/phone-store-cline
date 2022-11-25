@@ -16,8 +16,6 @@ const { data: phoneStores =[] ,isLoading }= useQuery({
 if(isLoading){
     return <Loading></Loading>
 }
-    
-
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols2 grid-cols-1 gap-6'>

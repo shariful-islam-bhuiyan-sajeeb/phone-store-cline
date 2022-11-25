@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft, FaStar } from "react-icons/fa";
+import BookingModal from '../../BookingModal/BookingModal';
 
 const CategoryDetailsCard = ({ category }) => {
-    const { price, resalePrice, used, name, img, description, location }=category;
+    const [booking ,setBooking] = useState(null)
+    const { price, resalePrice, used_of_year, name, img, description, ratings, release, location } = category;
+
     return (
         <div className="flex flex-col max-w-lg p-6 space-y-4 overflow-hidden rounded-lg shadow-xl  text-black">
             <div className="flex space-x-4">
@@ -16,17 +19,34 @@ const CategoryDetailsCard = ({ category }) => {
             <div>
                 <img src={img} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
                 <h2 className="mb-1 text-xl font-semibold "> Name: {name}</h2>
-                <p className="text-sm text-black">{description}</p>
+                <p className="text-sm text-black">{description.slice(0, 60)}</p>
             </div>
-            <div className="flex flex-wrap justify-between">
+
+            <div className="flex flex-wrap justify-between pt-3 ">
                 <div className="space-x-2">
-                    <Link> <FaArrowLeft className='text-2xl'></FaArrowLeft> </Link>
+                    <div>
+                        <p className='text-xl font-semibold'>Original Price: {price}</p>
+                        <p><small className='mr-10'>Used : {used_of_year} yr</small></p>
+                        
+                    </div>
                 </div>
                 <div className="flex space-x-2 text-sm text-black">
-
-                    <Link> <button>  <FaArrowRight className='text-2xl'></FaArrowRight></button> </Link>
+                    <div>
+                        <p className='text-xl'>Resale Price: {resalePrice}</p>
+                        <div>
+                            <p className='flex text-md'>Ratings-{ratings} <FaStar className='text-lg ml-2 text-orange-400 flex items-center'></FaStar> <FaStar className='text-lg ml-2 text-orange-400'></FaStar> <FaStar className='text-lg ml-2 text-orange-400'></FaStar> </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div>
+                <label onClick={() => setBooking(category)} htmlFor="confirmation-modal" className="btn btn-success p-3  ">Booking</label>
+            </div>
+            { booking &&
+                <BookingModal
+                category={category}
+                ></BookingModal>
+            }
         </div>
     );
 };

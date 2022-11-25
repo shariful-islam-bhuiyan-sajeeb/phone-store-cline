@@ -8,7 +8,7 @@ const CategoryDetails = () => {
 
 
     return (
-        <div>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10'>
             {
                 categories.map(category => <CategoryDetailsCard
                 key={category._id}
