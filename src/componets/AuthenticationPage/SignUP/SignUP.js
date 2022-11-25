@@ -1,10 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
-import { IconName, FaGoogle } from "react-icons/fa";
+import { Link, useNavigate } from 'react-router-dom';
+import { FaGoogle } from "react-icons/fa";
 import emailPage from '../../Assets/signUp email.webp'
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
-import { Result } from 'postcss';
 import toast from 'react-hot-toast';
 
 const SignUP = () => {
@@ -12,6 +11,7 @@ const SignUP = () => {
     const imageHostKey = process.env.REACT_APP_imgbb_Key 
     const [signUpError, setSignUpError] = useState()
     const { createUser, signInGoogle, updateUser }= useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleSingUP = data =>{
         setSignUpError('')
@@ -39,7 +39,11 @@ const SignUP = () => {
                 displayName: data.name
             }
             updateUser(userInfo)
-            .then(() =>{})
+            .then(() =>{
+                navigate('/')
+                console.log(data.name, data.email);
+
+            })
             .catch( err => console.log(err))
         })
         .catch(error =>{
@@ -49,7 +53,7 @@ const SignUP = () => {
 
     }
 
-
+    // Handle Google user
     const handleGoogle = () =>{
         signInGoogle()
         .then(result =>{

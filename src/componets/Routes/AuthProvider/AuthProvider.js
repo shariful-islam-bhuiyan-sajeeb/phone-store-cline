@@ -26,7 +26,7 @@ const AuthProvider = ({children}) => {
     }
 
     const updateUser = (userInfo) => {
-        return updateProfile(user, userInfo)  
+        return updateProfile(auth.currentUser, userInfo)  
     }
 
     const logOut = () => {
@@ -44,7 +44,7 @@ const AuthProvider = ({children}) => {
     }, [])
 
 
-    const authInfo = { login, createUser, signInGoogle, updateUser, logOut, user} 
+    const authInfo = { login, createUser, signInGoogle, updateUser, logOut, user,loading} 
 
     return (
        <AuthContext.Provider value={authInfo}>
