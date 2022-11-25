@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../AuthenticationPage/Login/Login";
 import SignUP from "../AuthenticationPage/SignUP/SignUP";
+import BookingDashBoard from "../BookingDashBoard/BookingDashBoard";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import CategoryDetails from "../Home/CategoryDetails/CategoryDetails";
 import Home from "../Home/Home";
@@ -32,5 +33,9 @@ export const router = createBrowserRouter([
         }
 
        ]
+    },
+    {
+        path:'/bookingDashBoard',
+        element: <BookingDashBoard></BookingDashBoard>
     }
 ])

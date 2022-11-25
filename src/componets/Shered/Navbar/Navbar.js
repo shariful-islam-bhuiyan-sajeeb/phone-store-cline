@@ -13,13 +13,14 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-        <li> <Link to='/'>Home</Link> </li>
-        <li> <Link >About</Link> </li>
 
+        <li> <Link >About</Link> </li>
         <li> <Link>Blog</Link> </li>
 
         {user?.uid ?
             <>
+                <li> <Link to='/'>Home</Link> </li>
+                <li> <Link to="/bookingDashBoard" >Booking DashBoard</Link> </li>
                 <li> <button onClick={handleLogOut}>LogOut</button> </li>
             </> :
             <li> <Link to='/login' >Login</Link> </li>

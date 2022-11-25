@@ -5,15 +5,16 @@ import { IconName, FaGoogle } from "react-icons/fa";
 import emailPage from '../../Assets/signUp email.webp'
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 import { Result } from 'postcss';
+import toast from 'react-hot-toast';
 
 const SignUP = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const imageHostKey = process.env.REACT_APP_imgbb_Key 
-   
     const [signUpError, setSignUpError] = useState()
-    const { createUser, signInGoogle }= useContext(AuthContext)
+    const { createUser, signInGoogle, updateUser }= useContext(AuthContext)
 
     const handleSingUP = data =>{
+        setSignUpError('')
         console.log(data);
         const image = data.image[0];
         const formData = new FormData();
@@ -29,14 +30,21 @@ const SignUP = () => {
             console.log(imgData.data.url);
            }
         })
-
         createUser(data.email, data.password)
         .then(result =>{
             const user = result.user;
             console.log(user);
+            toast.success('User Created Successfully')
+            const userInfo = {
+                displayName: data.name
+            }
+            updateUser(userInfo)
+            .then(() =>{})
+            .catch( err => console.log(err))
         })
-        .catch(err =>{
-            console.log(err);
+        .catch(error =>{
+            console.log(error);
+            setSignUpError(error.message)
         })
 
     }
@@ -97,9 +105,9 @@ const SignUP = () => {
                         {errors.image && <p className='text-red-700'>{errors.image?.message}</p>}
                     </div>
                     <input className='btn btn-accent w-full mt-4 mb-4' value='signup' type="submit" />
-
+                    { signUpError && <p className='text-red-600'> {signUpError}</p>}
                 </form>
-                {signUpError && <p className='text-red-700'>{signUpError}</p>}
+               
                 <p>All ready have an Account  <Link className='text-primary font-semibold' to='/login'>Login page.</Link></p>
                 <div className="divider">OR</div>
                 <button onClick={handleGoogle} className='btn btn-outline uppercase w-80 p-0 '> <FaGoogle className='text-xl mr-2 text-green-600'></FaGoogle>  Continue With Google</button>
