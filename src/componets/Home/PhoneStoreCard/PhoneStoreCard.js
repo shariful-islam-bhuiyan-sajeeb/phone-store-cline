@@ -18,7 +18,7 @@ const PhoneStoreCard = ({ phoneStore }) => {
             </div>
             <div>
                 <img src={img} alt="" className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500" />
-                <h2 className="mb-1 text-xl font-semibold "> Name: {name}</h2>
+                <h2 className="mb-1 text-2xl font-bold "> Brand: {name}</h2>
                 <p className="text-sm text-black">{description}</p>
             </div>
             <div className="flex flex-wrap justify-between">
@@ -26,8 +26,7 @@ const PhoneStoreCard = ({ phoneStore }) => {
                    <Link> <FaArrowLeft className='text-2xl'></FaArrowLeft> </Link>
                 </div>
                 <div className="flex space-x-2 text-sm text-black">
-                    
-                    <Link to={`/home/category/${category}`}><button >  <FaArrowRight className='text-2xl'></FaArrowRight></button> </Link>
+                    <Link to={`/home/category/${category}`}><button >  <FaArrowRight className='text-3xl hover:text-green-500 '></FaArrowRight></button> </Link>
                 </div>
             </div>
         </div>
