@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaArrowLeft, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import BookingModal from '../../BookingModal/BookingModal';
 import { DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
@@ -10,7 +10,8 @@ const CategoryDetailsCard = ({ category }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [booking, setBooking] = useState(null)
     const { user } = useContext(AuthContext)
-    console.log(user);
+    
+   
     const { price, resalePrice, used_of_year, name, img, description, ratings, release, location } = category;
 
     return (
@@ -51,6 +52,8 @@ const CategoryDetailsCard = ({ category }) => {
             {booking &&
                 <BookingModal
                     category={category}
+                    booking={booking}
+                    setBooking={setBooking}
                 ></BookingModal>
             }
         </div>

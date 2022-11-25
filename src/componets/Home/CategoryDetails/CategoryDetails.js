@@ -4,7 +4,7 @@ import CategoryDetailsCard from '../CategoryDetailsCard/CategoryDetailsCard';
 
 const CategoryDetails = () => {
     const categories = useLoaderData();
-    console.log(categories);
+   
 
 
     return (
