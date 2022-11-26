@@ -4,12 +4,19 @@ import { useForm } from "react-hook-form";
 import email from '../../Assets/sign in.webp'
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
+import UseTitle from '../../Hook/UseTitle/UseTitle';
+import useToken from '../../Hook/useToken/useToken';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { login, signInGoogle } = useContext(AuthContext)
+    const { user, login, signInGoogle } = useContext(AuthContext)
     const [loginError, setLoginError] = useState()
     const [userEmail, setUserEmail] = useState()
+    const [loginEmail, setLoginEmail]= useState('')
+
+    const [token] = useToken(loginEmail)
+      UseTitle('Login')
+     
 
     const location = useLocation()
     const navigate = useNavigate()
@@ -24,13 +31,28 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, {replace: true})
+               setLoginEmail(data.email)
+                // navigate(from, {replace: true})
+                
             })
             .catch(error => {
                 console.log(error.message)
                 setLoginError(error.message)
+
             })
     }
+
+    //----------jwt-----------------------
+    // const getUserToken = email => {
+    //     fetch(`http://localhost:5000/jwt?email=${email}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.accessToken) {
+    //                 localStorage.setItem('accessToken', data.accessToken);
+    //                 navigate('/')
+    //             }
+    //         })
+    // }
 
     const handleGoogle =()=>{
         signInGoogle()

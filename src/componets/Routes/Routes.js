@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/bookingDashBoard/bookingUsers',
-                element: <AdminRout><BookingUsers></BookingUsers></AdminRout>
+                element: <BookingUsers></BookingUsers>
             },
         ]
     }

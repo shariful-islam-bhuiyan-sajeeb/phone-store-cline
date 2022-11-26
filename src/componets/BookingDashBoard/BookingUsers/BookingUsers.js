@@ -23,12 +23,13 @@ const BookingUsers = () => {
                 toast.success('Make Admin is Successful')
                 refetch();
             }
+           
         })
     }
 
     return (
         <div>
-            <h2 className='text-4xl mb-4'>Booking Users...</h2>
+            <h2 className='text-4xl mb-6'>Booking Users</h2>
 
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
@@ -42,7 +43,7 @@ const BookingUsers = () => {
                             <th>Email</th>
                             <th>Admin</th>
                             <th>Delete</th>
-                            <th></th>
+                           <th></th>
                         </tr>
                     </thead>
                     <tbody>

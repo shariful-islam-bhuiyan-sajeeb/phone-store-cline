@@ -11,6 +11,7 @@ const BookingUsedAdmin = email => {
             .then(data =>{
                 console.log(data);
                 setIsAdmin(data.isAdmin)
+                setAdminIsLoading(false)
             })
         }
     },[email])

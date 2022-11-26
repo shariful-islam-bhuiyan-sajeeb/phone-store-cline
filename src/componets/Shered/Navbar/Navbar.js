@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const menuItems = <>
 
-        <li> <Link >About</Link> </li>
+        
         <li> <Link to='/blog'>Blog</Link> </li>
 
         {user?.uid ?

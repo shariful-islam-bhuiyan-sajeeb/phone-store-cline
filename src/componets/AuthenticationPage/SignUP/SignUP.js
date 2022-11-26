@@ -5,6 +5,7 @@ import { FaGoogle } from "react-icons/fa";
 import emailPage from '../../Assets/signUp email.webp'
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
+import UseTitle from '../../Hook/UseTitle/UseTitle';
 
 const SignUP = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -12,6 +13,7 @@ const SignUP = () => {
     const [signUpError, setSignUpError] = useState()
     const { createUser, signInGoogle, updateUser } = useContext(AuthContext)
     const navigate = useNavigate()
+    UseTitle('SignUp')
 
     const handleSingUP = data => {
         setSignUpError('')
@@ -67,8 +69,12 @@ const SignUP = () => {
         .then(data => {
             console.log('bookingSaverUser',data);
             navigate('/')
+            
         })
     }
+//------------------jwt----------------------------
+    
+
 
     // Handle Google user
     const handleGoogle = () => {

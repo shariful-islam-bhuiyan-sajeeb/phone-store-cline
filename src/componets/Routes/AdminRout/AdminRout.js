@@ -4,7 +4,7 @@ import BookingUsedAdmin from '../../Hook/BookingUsedAdmin/BookingUsedAdmin';
 import Loading from '../../Loading/Loading';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
-const AdminRout = () => {
+const AdminRout = ({Children}) => {
     const { user, loading } = useContext(AuthContext)
     const [isAdmin, adminIsLoading]=BookingUsedAdmin(user?.email)
     const location = useLocation()

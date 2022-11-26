@@ -5,13 +5,15 @@ import BookingModal from '../../BookingModal/BookingModal';
 import { DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
+import UseTitle from '../../Hook/UseTitle/UseTitle';
 
 const CategoryDetailsCard = ({ category, refetch }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [booking, setBooking] = useState(null)
     const { user } = useContext(AuthContext)
-    
-   
+    UseTitle('Phones Category')
+
+
     const { price, resalePrice, used_of_year, name, img, description, ratings, release, location } = category;
 
     return (
@@ -46,8 +48,9 @@ const CategoryDetailsCard = ({ category, refetch }) => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className=' flex justify-between'>
                 <label onClick={() => setBooking(category)} htmlFor="confirmation-modal" className="btn btn-success p-3 ">Booking</label>
+                <label className='btn btn-danger p-3' >Report</label>
             </div>
             {booking &&
                 <BookingModal
