@@ -2,10 +2,16 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../AuthenticationPage/Login/Login";
 import SignUP from "../AuthenticationPage/SignUP/SignUP";
 import BookingDashBoard from "../BookingDashBoard/BookingDashBoard";
+import BookingDashBoardLayout from "../BookingDashBoard/BookingDashBoardLayout/BookingDashBoardLayout";
+import BookingUsers from "../BookingDashBoard/BookingUsers/BookingUsers";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import CategoryDetails from "../Home/CategoryDetails/CategoryDetails";
 import Home from "../Home/Home";
 import Main from "../Layout/Main";
+import Blog from "../Shered/Blog/Blog";
+import AdminRout from "./AdminRout/AdminRout";
+import MyBooking from "./MyBooking/MyBooking/MyBooking";
+import PrivateRoutes from "./PrivateRoute/PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +22,10 @@ export const router = createBrowserRouter([
         {
             path: '/',
             element : <Home></Home>
+        },
+        {
+            path: '/blog',
+            element : <Blog></Blog>
         },
         {
             path: '/login',
@@ -36,6 +46,16 @@ export const router = createBrowserRouter([
     },
     {
         path:'/bookingDashBoard',
-        element: <BookingDashBoard></BookingDashBoard>
+        element:<BookingDashBoardLayout></BookingDashBoardLayout> ,
+        children:[
+            {
+                path:'/bookingDashBoard',
+                element: <MyBooking></MyBooking>
+            },
+            {
+                path:'/bookingDashBoard/bookingUsers',
+                element: <AdminRout><BookingUsers></BookingUsers></AdminRout>
+            },
+        ]
     }
 ])

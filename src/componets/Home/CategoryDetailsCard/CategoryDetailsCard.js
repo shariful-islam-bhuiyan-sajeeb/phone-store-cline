@@ -6,7 +6,7 @@ import { DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 
-const CategoryDetailsCard = ({ category }) => {
+const CategoryDetailsCard = ({ category, refetch }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [booking, setBooking] = useState(null)
     const { user } = useContext(AuthContext)
@@ -54,6 +54,7 @@ const CategoryDetailsCard = ({ category }) => {
                     category={category}
                     booking={booking}
                     setBooking={setBooking}
+                    refetch={refetch}
                 ></BookingModal>
             }
         </div>

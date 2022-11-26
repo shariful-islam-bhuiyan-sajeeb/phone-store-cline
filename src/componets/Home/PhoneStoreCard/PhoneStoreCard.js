@@ -2,7 +2,7 @@ import React from 'react';
 import {  FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-const PhoneStoreCard = ({ phoneStore }) => {
+const PhoneStoreCard = ({ phoneStore, refetch }) => {
     const { price, resalePrice, used, name, img, description, location, category }=phoneStore
     
    

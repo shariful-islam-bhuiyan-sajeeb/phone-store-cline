@@ -5,7 +5,7 @@ import PhoneStoreCard from '../PhoneStoreCard/PhoneStoreCard';
 
 const PhoneStoresCardes = () => {
 
-const { data: phoneStores =[] ,isLoading }= useQuery({
+const { data: phoneStores =[] ,isLoading ,refetch }= useQuery({
     queryKey:['phoneStores'],
     queryFn: async () =>{
         const res = await fetch('http://localhost:5000/mobileCollection')
@@ -23,6 +23,7 @@ if(isLoading){
             phoneStores.map(phoneStore => <PhoneStoreCard
             key={phoneStore._id}
             phoneStore={phoneStore}
+            refetch={refetch}
             ></PhoneStoreCard> )
            }
         </div>

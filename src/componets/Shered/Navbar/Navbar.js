@@ -8,14 +8,14 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(() => {})
+            .then(() => { })
             .catch(err => console.error(err))
     }
 
     const menuItems = <>
 
         <li> <Link >About</Link> </li>
-        <li> <Link>Blog</Link> </li>
+        <li> <Link to='/blog'>Blog</Link> </li>
 
         {user?.uid ?
             <>
@@ -30,7 +30,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar  bg-base-100 text-2xl font-semibold shadow-2xl py-6 mb-8 ">
+        <div className="navbar  bg-base-100 text-2xl font-semibold flex justify-between shadow-2xl py-6 mb-8 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -50,6 +50,9 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
+            <label htmlFor="dashBoard-drawer" tabIndex={0} className="btn btn-ghost  lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
 
         </div>
     );

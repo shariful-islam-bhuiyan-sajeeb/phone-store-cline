@@ -8,59 +8,76 @@ import toast from 'react-hot-toast';
 
 const SignUP = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const imageHostKey = process.env.REACT_APP_imgbb_Key 
+    const imageHostKey = process.env.REACT_APP_imgbb_Key
     const [signUpError, setSignUpError] = useState()
-    const { createUser, signInGoogle, updateUser }= useContext(AuthContext)
+    const { createUser, signInGoogle, updateUser } = useContext(AuthContext)
     const navigate = useNavigate()
 
-    const handleSingUP = data =>{
+    const handleSingUP = data => {
         setSignUpError('')
         console.log(data);
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image)
-        const url =`https://api.imgbb.com/1/upload?expiration=600&key=${imageHostKey}`;
+        const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageHostKey}`;
         fetch(url, {
             method: 'POST',
             body: formData
         })
-        .then(res => res.json())
-        .then(imgData =>{
-           if(imgData.success){
-            console.log(imgData.data.url);
-           }
-        })
-        createUser(data.email, data.password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-            toast.success('User Created Successfully')
-            const userInfo = {
-                displayName: data.name
-            }
-            updateUser(userInfo)
-            .then(() =>{
-                navigate('/')
-                console.log(data.name, data.email);
-
+            .then(res => res.json())
+            .then(imgData => {
+                if (imgData.success) {
+                    console.log(imgData.data.url);
+                }
             })
-            .catch( err => console.log(err))
-        })
-        .catch(error =>{
-            console.log(error);
-            setSignUpError(error.message)
-        })
+        createUser(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                toast.success('User Created Successfully')
+                const userInfo = {
+                    displayName: data.name
+                }
+                updateUser(userInfo)
+                    .then(() => {
+                        saveUser(data.name, data.email)
+                        console.log(data.name, data.email);
+
+                    })
+                    .catch(err => console.log(err))
+            })
+            .catch(error => {
+                console.log(error);
+                setSignUpError(error.message)
+            })
 
     }
 
-    // Handle Google user
-    const handleGoogle = () =>{
-        signInGoogle()
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/bookingUsers', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+
         })
-        .catch(error => console.error(error))
+        .then(res => res.json())
+        .then(data => {
+            console.log('bookingSaverUser',data);
+            navigate('/')
+        })
+    }
+
+    // Handle Google user
+    const handleGoogle = () => {
+        signInGoogle()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
     }
 
     return (
@@ -102,20 +119,20 @@ const SignUP = () => {
                             {...register("image",
                                 {
                                     required: "photo is required",
-                                    
+
                                 }
 
                             )} className=" border-solid border-2 p-6 rounded-lg  w-full max-w-xs" />
                         {errors.image && <p className='text-red-700'>{errors.image?.message}</p>}
                     </div>
                     <input className='btn btn-accent w-full mt-4 mb-4' value='signup' type="submit" />
-                    { signUpError && <p className='text-red-600'> {signUpError}</p>}
+                    {signUpError && <p className='text-red-600'> {signUpError}</p>}
                 </form>
-               
+
                 <p>All ready have an Account  <Link className='text-primary font-semibold' to='/login'>Login page.</Link></p>
                 <div className="divider">OR</div>
                 <button onClick={handleGoogle} className='btn btn-outline uppercase w-80 p-0 '> <FaGoogle className='text-xl mr-2 text-green-600'></FaGoogle>  Continue With Google</button>
-                
+
             </div>
 
         </div>
