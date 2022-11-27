@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../AuthenticationPage/Login/Login";
 import SignUP from "../AuthenticationPage/SignUP/SignUP";
+import AddProduct from "../BookingDashBoard/AddProduct/AddProduct";
 import AllSeller from "../BookingDashBoard/AllSeller/AllSeller";
 import BookingDashBoard from "../BookingDashBoard/BookingDashBoard";
 import BookingDashBoardLayout from "../BookingDashBoard/BookingDashBoardLayout/BookingDashBoardLayout";
 import BookingUsers from "../BookingDashBoard/BookingUsers/BookingUsers";
+import ManageProduct from "../BookingDashBoard/ManageProduct/ManageProduct";
 import ProductReport from "../BookingDashBoard/ProductReport/ProductReport";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import CategoryDetails from "../Home/CategoryDetails/CategoryDetails";
@@ -65,6 +67,14 @@ export const router = createBrowserRouter([
             {
                 path:'/bookingDashBoard/productReport',
                 element: <ProductReport></ProductReport>
+            },
+            {
+                path:'/bookingDashBoard/addProduct',
+                element: <AddProduct></AddProduct>
+            },
+            {
+                path:'/bookingDashBoard/manageProduct',
+                element: <ManageProduct></ManageProduct>
             },
         ]
     }

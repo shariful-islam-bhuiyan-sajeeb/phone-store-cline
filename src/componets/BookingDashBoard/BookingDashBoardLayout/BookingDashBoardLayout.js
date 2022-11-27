@@ -4,7 +4,7 @@ import BookingUsedAdmin from '../../Hook/BookingUsedAdmin/BookingUsedAdmin';
 import UseTitle from '../../Hook/UseTitle/UseTitle';
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 import Navbar from '../../Shered/Navbar/Navbar';
-import { HiOutlineArchiveBoxArrowDown, HiShieldExclamation, HiUsers, } from "react-icons/hi2";
+import { HiOutlineArchiveBoxArrowDown, HiOutlineCircleStack, HiShieldExclamation, HiUsers, } from "react-icons/hi2";
 import { useQuery } from '@tanstack/react-query';
 
 const BookingDashBoardLayout = () => {
@@ -13,7 +13,7 @@ const BookingDashBoardLayout = () => {
     const [isAdmin] = BookingUsedAdmin(user?.email)
     UseTitle('Booking Dashboard')
 
-    const { data: imgStores=[], refetch } = useQuery({
+    const { data: imgStores = [], refetch } = useQuery({
         queryKey: ['imgStores'],
         queryFn: async () => {
             try {
@@ -39,7 +39,7 @@ const BookingDashBoardLayout = () => {
                 <div className="drawer-content ">
                     <Outlet></Outlet>
                 </div>
-                
+
                 <div className="drawer-side ">
                     <label htmlFor="dashBoard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-base-100 mt-20 text-base-content">
@@ -57,12 +57,14 @@ const BookingDashBoardLayout = () => {
                             }
                         </div>
                         <li><Link to='/bookingDashBoard'>  <HiOutlineArchiveBoxArrowDown className='text-xl text-orange-500' /> <span className='font-semibold'>My Booking</span> </Link></li>
-                        <li><Link to='/bookingDashBoard/productReport'><HiShieldExclamation className='text-xl text-red-500'/> <span className='font-semibold'>Report</span> </Link></li>
+                        <li><Link to='/bookingDashBoard/productReport'><HiShieldExclamation className='text-xl text-red-500' /> <span className='font-semibold'>Report</span> </Link></li>
                         {
                             isAdmin && <>
+                                <li><Link to='/bookingDashBoard/addProduct'> <HiOutlineCircleStack className='text-xl text-green-600' /> <span className='font-semibold'>Add Products</span></Link></li>
                                 <li><Link to='/bookingDashBoard/bookingUsers'> <HiUsers className='text-xl text-green-600' /> <span className='font-semibold'>All Buyer</span></Link></li>
                                 <li><Link to='/bookingDashBoard/allSeller'> <HiUsers className='text-xl text-green-600' /> <span className='font-semibold'>All Seller</span></Link></li>
-                                
+                                <li><Link to='/bookingDashBoard/manageProduct'> <HiUsers className='text-xl text-green-600' /> <span className='font-semibold'> Manage Products</span></Link></li>
+
                             </>
                         }
                     </ul>

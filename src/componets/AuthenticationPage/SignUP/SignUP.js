@@ -42,7 +42,7 @@ const SignUP = () => {
                         email: data.email,
                         image: imgData.data.url,
                     }
-                    console.log(imgStore);
+                   
 
                     // fetch('http://localhost:5000/imgStore',{
                     //     method: 'POST',
