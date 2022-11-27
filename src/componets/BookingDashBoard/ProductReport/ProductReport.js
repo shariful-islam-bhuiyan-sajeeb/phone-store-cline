@@ -1,24 +1,24 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 
-const MyBooking = () => {
-    const { user } = useContext(AuthContext);
+const ProductReport = () => {
+    const {user}=useContext(AuthContext)
 
-    const url =`http://localhost:5000/bookings?email=${user?.email}`;
-
-    const { data: bookings = [] } = useQuery({
-        queryKey: ['bookings', user?.email],
+    const url = `http://localhost:5000/reports?email=${user?.email}`;
+    console.log(url);
+    const { data: reports =[] } = useQuery({
+        queryKey: ['reports'],
         queryFn: async () => {
-            const res = await fetch(url);
+            const res = await fetch(url)
             const data = await res.json();
             return data;
         }
     })
-
     return (
         <div>
-            <h2 className='text-2xl mb-6'> My Booking...</h2>
+            <h2 className='text-3xl'> report</h2>
+
             <div className="overflow-x-auto w-full">
                 <table className="table bg-white w-full">
                     <thead>
@@ -27,17 +27,16 @@ const MyBooking = () => {
                                 No.
                             </th>
                             <th>Brand Model</th>
-                            <th>Used Product</th>
+                            <th>Reporter Name / Email</th>
                             <th>Original Price</th>
                             <th>sell Price</th>
-                            <th>Remove</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
 
                         {
-                            bookings.map((booking, i) => <tr key={booking._id}>
+                            reports.map((report, i) => <tr key={report._id}>
                                 <th>
                                     {i + 1}
                                 </th>
@@ -45,26 +44,24 @@ const MyBooking = () => {
                                     <div className="flex items-center space-x-3">
                                         <div className="avatar">
                                             <div className="mask mask-squircle w-12 h-12">
-                                                <img src={booking.img} alt="Avatar Tailwind CSS Component" />
+                                                <img src={report.img} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
                                         <div>
-                                            <div className="font-bold">{booking.brandName}</div>
-                                            <p className='text-md'>{booking.location}</p>
+                                            <div className="font-bold">{report.brandName}</div>
+                                            <p className='text-md'>{report.location}</p>
 
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <p>{booking.usedProduct} year</p>
+                                    <p>{user?.email}</p>
                                     <br />
-                                    <span className="badge badge-ghost badge-sm">{booking.release}day</span>
+                                    <span className="badge badge-ghost badge-lg">{user?.displayName}</span>
                                 </td>
-                                <td>{booking.originalPrice}</td>
-                                <td>{booking.resellerPrice}</td>
-                                <th>
-                                    <button className="btn btn-ghost btn-xs">Delete</button>
-                                </th>
+                                <td>{report.originalPrice}</td>
+                                <td>{report.resellerPrice}</td>
+                                
                             </tr>)
                         }
 
@@ -76,4 +73,4 @@ const MyBooking = () => {
     );
 };
 
-export default MyBooking;
+export default ProductReport;

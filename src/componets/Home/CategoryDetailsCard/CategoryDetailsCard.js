@@ -6,6 +6,7 @@ import { DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 import UseTitle from '../../Hook/UseTitle/UseTitle';
+import ReportModal from '../../BookingModal/ReportModal/ReportModal';
 
 const CategoryDetailsCard = ({ category, refetch }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -50,7 +51,7 @@ const CategoryDetailsCard = ({ category, refetch }) => {
             </div>
             <div className=' flex justify-between'>
                 <label onClick={() => setBooking(category)} htmlFor="confirmation-modal" className="btn btn-success p-3 ">Booking</label>
-                <label className='btn btn-danger p-3' >Report</label>
+                <label onClick={() => setBooking(category)} htmlFor="report-modal" className='btn btn-danger p-3' >Report</label>
             </div>
             {booking &&
                 <BookingModal
@@ -59,6 +60,13 @@ const CategoryDetailsCard = ({ category, refetch }) => {
                     setBooking={setBooking}
                     refetch={refetch}
                 ></BookingModal>
+            },
+            {booking &&
+                <ReportModal
+                    category={category}
+                    setBooking={setBooking}
+                    refetch={refetch}
+                ></ReportModal>
             }
         </div>
     );

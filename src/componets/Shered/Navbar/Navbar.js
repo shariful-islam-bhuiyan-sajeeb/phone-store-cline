@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import mobileshop from '../../Assets/navbar photo.png'
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 
 const Navbar = () => {
     const { logOut, user } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleLogOut = () => {
         logOut()

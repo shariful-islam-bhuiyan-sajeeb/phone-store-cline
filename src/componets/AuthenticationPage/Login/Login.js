@@ -11,7 +11,6 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user, login, signInGoogle } = useContext(AuthContext)
     const [loginError, setLoginError] = useState()
-    const [userEmail, setUserEmail] = useState()
     const [loginEmail, setLoginEmail]= useState('')
 
     const [token] = useToken(loginEmail)
@@ -20,8 +19,12 @@ const Login = () => {
 
     const location = useLocation()
     const navigate = useNavigate()
+       
 
     const from = location.state?.from?.pathname || '/';
+    if (token) {
+        navigate(from, { replace: true })
+    }
 
 
     const handleLogin = data => {
@@ -32,7 +35,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                setLoginEmail(data.email)
-                // navigate(from, {replace: true})
+               
                 
             })
             .catch(error => {
