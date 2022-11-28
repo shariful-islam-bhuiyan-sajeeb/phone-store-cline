@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         {
             path: '/home/category/:id',
             element: <CategoryDetails></CategoryDetails>,
-            loader: ({ params }) => fetch(`http://localhost:5000/home/category/${params.id}`)
+            loader: ({ params }) => fetch(`https://assignment-12-server-lac.vercel.app/home/category/${params.id}`)
 
         }
 
@@ -50,19 +50,19 @@ export const router = createBrowserRouter([
     },
     {
         path:'/bookingDashBoard',
-        element:<BookingDashBoardLayout></BookingDashBoardLayout> ,
+        element: <BookingDashBoardLayout></BookingDashBoardLayout> ,
         children:[
             {
                 path:'/bookingDashBoard',
-                element: <MyBooking></MyBooking>
+                element: <AdminRout></AdminRout>
             },
             {
                 path:'/bookingDashBoard/bookingUsers',
-                element: <BookingUsers></BookingUsers>
+                element: <AdminRout><BookingUsers></BookingUsers></AdminRout>
             },
             {
                 path:'/bookingDashBoard/allSeller',
-                element: <AllSeller></AllSeller>
+                element: <AdminRout> <AllSeller></AllSeller></AdminRout>
             },
             {
                 path:'/bookingDashBoard/productReport',

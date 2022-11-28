@@ -1,5 +1,21 @@
 # Getting Started with Create React App
 
+# -Live link:
+# - used Daisy uI
+# - used Mamba ui 
+# - used Firebase Authentication
+# - used react Font Awesome
+# -  used modal 
+# - used mongodb 
+# - axios use manageProductCard component
+# - Admin Email:- habib00@gmail.com
+# - Admin Email:- seller22@gmail.com
+# -  pass - 11111111
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

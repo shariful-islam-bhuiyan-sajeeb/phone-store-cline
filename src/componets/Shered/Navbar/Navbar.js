@@ -9,13 +9,11 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(() => { })
+            .then(() => { navigate('/login') })
             .catch(err => console.error(err))
     }
 
     const menuItems = <>
-
-        
         <li> <Link to='/blog'>Blog</Link> </li>
 
         {user?.uid ?

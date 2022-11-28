@@ -1,22 +1,27 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
+import UseTitle from '../../Hook/UseTitle/UseTitle';
 
 const BookingUsers = () => {
     const [deleteUser, setDeleteUser] = useState(null)
+    UseTitle('/ All Buyer')
 
     const { data: bookingUsers = [], refetch } = useQuery({
         queryKey: ['bookingUsers'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/bookingUsers');
+            const res = await fetch('https://assignment-12-server-lac.vercel.app/bookingUsers');
             const data = await res.json();
             return data;
         }
     })
 
-    const handleMakeAdmin = id => {
-        fetch(`http://localhost:5000/bookingUsers/admin/${id}`, {
-            method: 'PUT'
+    const handleMakeAdmin = email => {
+        fetch(`https://assignment-12-server-lac.vercel.app/bookingUsers/admin/${email}`, {
+            method: 'PUT',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
         })
             .then(res => res.json())
             .then(data => {
@@ -28,8 +33,10 @@ const BookingUsers = () => {
             })
     }
 
+    
+
     const handleDelete = bookingUser => {
-        fetch(`http://localhost:5000/bookingUser/${bookingUser._id}`, {
+        fetch(`https://assignment-12-server-lac.vercel.app/bookingUser/${bookingUser._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -43,7 +50,7 @@ const BookingUsers = () => {
                 }
 
             })
-    }
+    } 
 
     return (
         <div>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-const BookingUsedAdmin = email => {
+const useAdmin = email => {
     const [isAdmin, setIsAdmin] = useState(false)
     const [adminIsLoading, setAdminIsLoading]= useState(true)
     
     useEffect( () =>{
         if(email){
-            fetch(`http://localhost:5000/bookingUsers/admin/${email}`)
+            fetch(`https://assignment-12-server-lac.vercel.app/bookingUsers/admin/${email}`)
             .then( res => res.json())
             .then(data =>{
                 console.log(data);
@@ -18,4 +18,4 @@ const BookingUsedAdmin = email => {
     return [isAdmin ,adminIsLoading]
 };
 
-export default BookingUsedAdmin;
+export default useAdmin;

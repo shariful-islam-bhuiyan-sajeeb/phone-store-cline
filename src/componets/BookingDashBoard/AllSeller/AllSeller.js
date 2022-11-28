@@ -1,15 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import UseTitle from '../../Hook/UseTitle/UseTitle';
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 
 const AllSeller = () => {
-
     const { user } = useContext(AuthContext);
+    UseTitle('/All Seller')
 
     const { data: bookingUsers = [], refetch } = useQuery({
         queryKey: ['bookingUsers'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/bookingUsers');
+            const res = await fetch('https://assignment-12-server-lac.vercel.app/bookingUsers');
             const data = await res.json();
             return data;
         }
@@ -29,7 +30,7 @@ const AllSeller = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Verify</th>
-                            <th>Seller</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,7 +61,7 @@ const AllSeller = () => {
                                     <button className="btn btn-outline btn-info">Verify</button>
                                 </th>
                                 <th>
-                                    <button className="btn btn-outline btn-info">Seller</button>
+                                    <button className="btn  btn-warning">Delete</button>
                                 </th>
                             </tr>)
                         }

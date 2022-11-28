@@ -30,7 +30,7 @@ const ReportModal = ({category, refetch, setBooking}) => {
 
         }
 
-        fetch('http://localhost:5000/reports', {
+        fetch('https://assignment-12-server-lac.vercel.app/reports', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

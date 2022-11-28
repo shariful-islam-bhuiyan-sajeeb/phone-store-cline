@@ -1,11 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import UseTitle from '../../Hook/UseTitle/UseTitle';
 import { AuthContext } from '../../Routes/AuthProvider/AuthProvider';
 
 const ProductReport = () => {
     const {user}=useContext(AuthContext)
+    UseTitle('/ProductReport')
 
-    const url = `http://localhost:5000/reports?email=${user?.email}`;
+    const url = `https://assignment-12-server-lac.vercel.app/reports?email=${user?.email}`;
     console.log(url);
     const { data: reports =[] } = useQuery({
         queryKey: ['reports'],

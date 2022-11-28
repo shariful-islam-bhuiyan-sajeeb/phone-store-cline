@@ -5,17 +5,17 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const MyBooking = () => {
     const { user } = useContext(AuthContext);
 
-    const url =`http://localhost:5000/bookings?email=${user?.email}`;
-
+    const url =`https://assignment-12-server-lac.vercel.app/bookings?email=${user?.email}`;
+    
     const { data: bookings = [] } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(url);
             const data = await res.json();
+           
             return data;
         }
     })
-
     return (
         <div>
             <h2 className='text-2xl mb-6'> My Booking...</h2>
@@ -67,9 +67,7 @@ const MyBooking = () => {
                                 </th>
                             </tr>)
                         }
-
                     </tbody>
-
                 </table>
             </div>
         </div>

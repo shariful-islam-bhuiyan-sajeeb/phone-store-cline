@@ -10,20 +10,20 @@ const Blog = () => {
                 <p className="mt-4 mb-8 dark:text-gray-400">Sagittis tempor donec id vestibulum viverra. Neque condimentum primis orci at lacus amet bibendum.</p>
                 <div className="space-y-4 pb-10">
                     <details className="w-full border rounded-lg">
-                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">Difference between SQL and NoSQL?</summary>
-                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">SQL is the programming language used to interface with relational databases.(Relational databases model data as records in rows and tables with logical links between them).NoSQL is a class of DBMs that are non - relational and generally do not use SQL. </p>
+                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400"> What are the different ways to manage a state in a React application?</summary>
+                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">As your application grows, it helps to be more intentional about how your state is organized and how the data flows between your components.Redundant or duplicate state is a common source of bugs.In this chapter, you’ll learn how to structure your state well, how to keep your state update logic maintainable, and how to share state between distant components. </p>
                     </details>
                     <details className="w-full border rounded-lg">
-                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">What is JWT, and how does it work ??</summary>
-                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">What is JWT(JSON Web Token)?JSON Web Token(JWT) is an open standard(RFC 7519) for securely transmitting information between parties as JSON object.It is compact, readable and digitally signed using a private key / or a public key pair by the Identity Provider(IdP). </p>
+                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">How does prototypical inheritance work?</summary>
+                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">The Prototypal Inheritance is a feature in javascript used to add methods and properties in objects.It is a method by which an object can inherit the properties and methods of another object.Traditionally, in order to get and set the[[Prototype]]of an object, we use Object.getPrototypeOf and Object. </p>
                     </details>
                     <details className="w-full border rounded-lg">
-                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">What is the difference between javascript and NodeJS ?</summary>
-                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">JavaScript is a simple programming language that can be used with any browser that has the JavaScript Engine installed.Node.js, on the other hand, is an interpreter or execution environment for the JavaScript programming language. </p>
+                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">What is a unit test? Why should we write unit tests?</summary>
+                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">The main objective of unit testing is to isolate written code to test and determine if it works as intended.Unit testing is an important step in the development process, because if done correctly, it can help detect early flaws in code which may be more difficult to find in later testing stages. </p>
                     </details>
                     <details className="w-full border rounded-lg mb-10">
-                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400">How does NodeJS handle multiple requests at the same time?</summary>
-                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">How NodeJS handle multiple client requests?NodeJS receives multiple client requests and places them into EventQueue.NodeJS is built with the concept of event - driven architecture.NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. </p>
+                        <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400"> React vs. Angular vs. Vue?</summary>
+                        <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">React is one of the most popular JavaScript projects with 160k stars on GitHub.Its developed and maintained by Facebook, and its used internally in many of their projects. Out of the three frameworks, Vue has the most stars on GitHub, with 176k stars. The project is developed and led by ex-Googler Evan You..Angular is developed by Google, but surprisingly its not used in some of their flagship products such as Search or Youtube. Its often used in enterprise projects, and it powers over 97,000 websites based on BuiltWiths data</p>
                     </details>
                 </div>
             </div>

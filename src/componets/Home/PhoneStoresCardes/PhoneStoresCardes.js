@@ -8,7 +8,7 @@ const PhoneStoresCardes = () => {
 const { data: phoneStores =[] ,isLoading ,refetch }= useQuery({
     queryKey:['phoneStores'],
     queryFn: async () =>{
-        const res = await fetch('http://localhost:5000/mobileCollection')
+        const res = await fetch('https://assignment-12-server-lac.vercel.app/mobileCollection')
         const data = await res.json();
         return data;
     }

@@ -44,7 +44,7 @@ const SignUP = () => {
                     }
                    
 
-                    // fetch('http://localhost:5000/imgStore',{
+                    // fetch('https://assignment-12-server-lac.vercel.app/imgStore',{
                     //     method: 'POST',
                     //     headers:{
                     //         'content-type': 'application/json',
@@ -83,7 +83,7 @@ const SignUP = () => {
 
     const saveUser = (name, email, role) => {
         const user = { name, email, role };
-        fetch('http://localhost:5000/bookingUsers', {
+        fetch('https://assignment-12-server-lac.vercel.app/bookingUsers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
