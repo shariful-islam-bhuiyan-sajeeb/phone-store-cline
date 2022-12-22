@@ -18,7 +18,7 @@ if(isLoading){
 }
 
     return (
-        <div className='grid lg:grid-cols-3 md:grid-cols2 grid-cols-1 gap-6 mt-10'>
+        <div className='grid lg:grid-cols-3 md:grid-cols2 grid-cols-1  gap-6 mt-10 '>
            {
             phoneStores.map(phoneStore => <PhoneStoreCard
             key={phoneStore._id}

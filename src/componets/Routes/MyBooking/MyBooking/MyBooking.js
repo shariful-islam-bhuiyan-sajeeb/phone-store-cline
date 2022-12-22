@@ -6,13 +6,11 @@ const MyBooking = () => {
     const { user } = useContext(AuthContext);
 
     const url =`https://assignment-12-server-lac.vercel.app/bookings?email=${user?.email}`;
-    
     const { data: bookings = [] } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(url);
             const data = await res.json();
-           
             return data;
         }
     })
@@ -63,7 +61,7 @@ const MyBooking = () => {
                                 <td>{booking.originalPrice}</td>
                                 <td>{booking.resellerPrice}</td>
                                 <th>
-                                    <button className="btn btn-ghost btn-xs">Delete</button>
+                                    <button className="btn btn-warning btn-sm btn-outline">Delete</button>
                                 </th>
                             </tr>)
                         }

@@ -1,0 +1,36 @@
+.animation{
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    border-radius: 15px;
+}
+.animation::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 150%;
+    top: -100px;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: rotate 4s linear infinite;
+    z-index: -1;
+    
+}
+
+.animation::after{
+   content: '';
+   position: absolute;
+   background: white;
+   inset: 4px;
+   border-radius: 10px; 
+   z-index: -1;
+}
+
+@keyframes rotate{
+    form{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+

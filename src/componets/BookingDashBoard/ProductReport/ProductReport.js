@@ -10,7 +10,7 @@ const ProductReport = () => {
     const url = `https://assignment-12-server-lac.vercel.app/reports?email=${user?.email}`;
     console.log(url);
     const { data: reports =[] } = useQuery({
-        queryKey: ['reports'],
+        queryKey: ['reports', user?.email],
         queryFn: async () => {
             const res = await fetch(url)
             const data = await res.json();

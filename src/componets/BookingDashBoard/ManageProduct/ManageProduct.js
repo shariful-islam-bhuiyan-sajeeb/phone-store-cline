@@ -25,10 +25,6 @@ const ManageProduct = () => {
             }
         }
     })
-
-
-
-
     if(isLoading){
         return <Loading></Loading>
     }

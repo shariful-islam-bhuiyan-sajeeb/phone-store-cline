@@ -1,14 +1,13 @@
 import React from 'react';
+import './PhoneStoreCard.css'
 import {  FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const PhoneStoreCard = ({ phoneStore, refetch }) => {
     const { price, resalePrice, used, name, img, description, location, category }=phoneStore
     
-   
-
     return (
-        <div className="flex flex-col max-w-lg p-6 space-y-4 overflow-hidden rounded-lg shadow-xl  text-black">
+        <div className=" animation border-2 flex flex-col max-w-lg p-6 mx-auto space-y-4 overflow-hidden rounded-lg shadow-xl  text-black">
             <div className="flex space-x-4">
                 <img alt="" src={img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                 <div className="flex flex-col space-y-1">
@@ -23,10 +22,10 @@ const PhoneStoreCard = ({ phoneStore, refetch }) => {
             </div>
             <div className="flex flex-wrap justify-between">
                 <div className="space-x-2">
-                   <Link> <FaArrowLeft className='text-2xl'></FaArrowLeft> </Link>
+                    <Link> <FaArrowLeft className='text-2xl'></FaArrowLeft> </Link>
                 </div>
                 <div className="flex space-x-2 text-sm text-black">
-                    <Link to={`/home/category/${category}`}><button >  <FaArrowRight className='text-3xl hover:text-green-500 '></FaArrowRight></button> </Link>
+                    <Link to={`/homeCategory/${category}`}><button className='animation2' >  <FaArrowRight className='text-3xl hover:text-green-500 '></FaArrowRight></button> </Link>
                 </div>
             </div>
         </div>

@@ -13,7 +13,6 @@ const Home = () => {
            <PhoneStoresCardes></PhoneStoresCardes>
             <PhoneReviews></PhoneReviews>
            <AdvertiseMobileLogo></AdvertiseMobileLogo>
-            
         </div>
     );
 };

@@ -40,29 +40,28 @@ export const router = createBrowserRouter([
             element: <SignUP></SignUP>
         },
         {
-            path: '/home/category/:id',
-            element: <CategoryDetails></CategoryDetails>,
-            loader: ({ params }) => fetch(`https://assignment-12-server-lac.vercel.app/home/category/${params.id}`)
-
+            path: '/homeCategory/:id',
+            element: <PrivateRoutes> <CategoryDetails></CategoryDetails></PrivateRoutes>,
+            loader: ({ params }) => fetch(`https://assignment-12-server-lac.vercel.app/homeCategory/${params.id}`)
         }
 
        ]
     },
     {
         path:'/bookingDashBoard',
-        element: <BookingDashBoardLayout></BookingDashBoardLayout> ,
+        element: <PrivateRoutes><BookingDashBoardLayout></BookingDashBoardLayout></PrivateRoutes> ,
         children:[
             {
                 path:'/bookingDashBoard',
-                element: <AdminRout></AdminRout>
+                element: <MyBooking></MyBooking>
             },
             {
                 path:'/bookingDashBoard/bookingUsers',
-                element: <AdminRout><BookingUsers></BookingUsers></AdminRout>
+                element: <BookingUsers></BookingUsers>
             },
             {
                 path:'/bookingDashBoard/allSeller',
-                element: <AdminRout> <AllSeller></AllSeller></AdminRout>
+                element: <AllSeller></AllSeller>
             },
             {
                 path:'/bookingDashBoard/productReport',
