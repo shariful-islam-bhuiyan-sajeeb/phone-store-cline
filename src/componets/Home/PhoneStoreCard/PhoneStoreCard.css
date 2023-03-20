@@ -11,7 +11,7 @@
     height: 150%;
     top: -100px;
     background: linear-gradient(#00ccff, #d500f9);
-    animation: rotate 4s linear infinite;
+    animation: rotate 3s linear infinite;
     z-index: -1;
     
 }
