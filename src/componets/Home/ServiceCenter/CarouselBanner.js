@@ -1,7 +1,8 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Typewriter from "typewriter-effect";
 
 export default class SimpleSlider extends Component {
   render() {
@@ -15,7 +16,13 @@ export default class SimpleSlider extends Component {
     return (
       <div className="flex flex-col justify-center px-4">
         <h2 className="lg:text-4xl sm:text-2xl text-xl text-center font-bold text-black sm:mb-10 mb-6">
-          Discover Samsung Event Offers{" "}
+          <Typewriter
+            options={{
+              strings: ["Discover Samsung Event Offers"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </h2>
         <Slider {...settings}>
           <div className="">
