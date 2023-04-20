@@ -17,6 +17,8 @@ import Blog from "../Shered/Blog/Blog";
 import AdminRout from "./AdminRout/AdminRout";
 import MyBooking from "./MyBooking/MyBooking/MyBooking";
 import PrivateRoutes from "./PrivateRoute/PrivateRoutes";
+import WhySell from "../Home/ServiceCenter/WhySell";
+import ParticleBackgrang from "../Animation Design/ParticleBackgrang";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "whySell",
+        element: <WhySell />,
       },
       {
         path: "/blog",
@@ -44,6 +50,10 @@ export const router = createBrowserRouter([
         path: "/Signup",
         element: <SignUP></SignUP>,
       },
+      // {
+      //   path: "/particleBackgrang",
+      //   element: <ParticleBackgrang />,
+      // },
       {
         path: "/homeCategory/:id",
         element: (

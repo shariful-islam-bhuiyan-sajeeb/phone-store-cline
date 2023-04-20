@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-# -Live link: https://assignment-12-34bee.web.app
+# -Live firebase link: https://assignment-12-34bee.web.app/
+
+# netlify live Link : https://sage-manatee-709895.netlify.app/
 
 # - used Daisy uI
 

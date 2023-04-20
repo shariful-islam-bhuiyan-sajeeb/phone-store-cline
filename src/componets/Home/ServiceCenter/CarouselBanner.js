@@ -14,7 +14,7 @@ export default class SimpleSlider extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="flex flex-col justify-center px-4">
+      <div className="flex flex-col justify-center px-4 mt-10">
         <h2 className="lg:text-4xl sm:text-2xl text-xl text-center font-bold text-black sm:mb-10 mb-6">
           <Typewriter
             options={{

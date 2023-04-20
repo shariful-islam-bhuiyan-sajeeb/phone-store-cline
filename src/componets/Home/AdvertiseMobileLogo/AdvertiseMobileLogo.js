@@ -26,30 +26,30 @@ const AdvertiseMobileLogo = () => {
       </div>
       <div className="container  md:mt-8 mt-4 md:px-0 px-4 mx-auto dark:text-gray-400">
         <div className="flex flex-wrap md:mb-10 sm:gap-0 gap-4  mb-4 w-full justify-around">
-          <div className="flex justify-center p-2   align-middle border hover:border-sky-400">
+          <div className="flex justify-center p-2   align-middle border border-gray-500 hover:border-sky-500">
             <img className="w-36 rounded-lg" src={iPhone} alt="" />
           </div>
-          <div className="flex justify-center p-2 border hover:border-sky-400 align-middle ">
+          <div className="flex justify-center p-2 border border-gray-500 hover:border-sky-500 align-middle ">
             <img className="sm:w-40 w-28" src={mi} alt="" />
           </div>
-          <div className="flex justify-center  p-2 border hover:border-sky-400 ">
+          <div className="flex justify-center  p-2 border border-gray-500 hover:border-sky-500 ">
             <img className="sm:w-40 w-28" src={samsung} alt="" />
           </div>
-          <div className="flex justify-center p-2 border hover:border-sky-400">
+          <div className="flex justify-center p-2 border border-gray-500 hover:border-sky-500">
             <img className="sm:w-40 w-28" src={sony} alt="" />
           </div>
         </div>
         <div className="flex flex-wrap w-full sm:gap-0 gap-4 justify-around">
-          <div className="flex justify-center p-2 border hover:border-sky-400">
+          <div className="flex justify-center p-2 border border-gray-500 hover:border-sky-500">
             <img className="sm:w-40 w-28" src={htc} alt="" />
           </div>
-          <div className="flex justify-center p-2 border hover:border-sky-400">
+          <div className="flex justify-center p-2 border border-gray-500 hover:border-sky-500">
             <img className="sm:w-40 w-28" src={nokia} alt="" />
           </div>
-          <div className="flex justify-center p-2 border hover:border-sky-400">
+          <div className="flex justify-center p-2 border border-gray-500 hover:border-sky-500">
             <img className="sm:w-40 w-28" src={realme} alt="" />
           </div>
-          <div className="flex justify-center p-2 border hover:border-sky-400">
+          <div className="flex justify-center p-2 border border-gray-500 hover:border-sky-500">
             <img className="sm:w-40 w-28" src={walton} alt="" />
           </div>
         </div>

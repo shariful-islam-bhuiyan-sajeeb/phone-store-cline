@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./PhoneReviews.css";
 import phone1 from "../../Assets/mobile phone/phone4.jpeg";
 import phone2 from "../../Assets/mobile phone/phone3.jpeg";
+import ReactPlayer from "react-player";
 
 const PhoneReviews = () => {
   const [VideoPost, setVideoPost] = useState([]);
@@ -136,6 +137,7 @@ const PhoneReviews = () => {
               </div>
             </div>
           </div>
+          {/* ------------------------ video section  */}
           <div
             aria-hidden="true"
             className=" md:w-2/5 w-full mx-auto md:mt-0 mt-3  "
@@ -163,6 +165,7 @@ const PhoneReviews = () => {
           </div>
         </div>
         {/* ---------------------section two ---------------- */}
+
         <div>
           <div className=" flex md:flex-row  flex-col  md:mt-8 mt-4 ">
             <div
@@ -187,6 +190,8 @@ const PhoneReviews = () => {
                       </div>
                     </div>
                   </div>
+                  // now------------------
+                  // <iframe width="560" height="315" src="https://www.youtube.com/embed/UPBNq9tH-lk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 ))}
               </div>
             </div>

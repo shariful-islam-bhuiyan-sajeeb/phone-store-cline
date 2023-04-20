@@ -1,0 +1,38 @@
+[
+  {
+    "_id": 1,
+    "title": "Reach",
+    "img": "https://i.ibb.co/Sc4dVJS/O1-CN01x7m2-GQ1-Lsd-RDBg-VMZ-6000000001355-2-tps-104-108.png",
+    "description": "Millions of customers on Phone Store, Bangladesh's most visited shopping destination"
+  },
+  {
+    "_id": 2,
+    "title": "Free Registration",
+    "img": "https://i.ibb.co/JHLxQbf/O1-CN01m-H8y9s1d-Lo8-Ua-Jb5f-6000000003720-2-tps-112-112.png",
+    "description": "Account registration & listing items for sale is free"
+  },
+  {
+    "_id": 3,
+    "title": "Reliable Shipping",
+    "img": "https://i.ibb.co/HHVcK13/O1-CN01z-Llbg-X1-Trja-Nq-Vq-Wo-6000000002436-2-tps-106-96.png",
+    "description": "Fast, reliable and hassle free delivery through Daraz logistic network"
+  },
+  {
+    "_id": 4,
+    "title": "Timely Payments",
+    "img": "https://i.ibb.co/mz24VsX/O1-CN01-Wlx7-Xo1-J4avx-Awqru-6000000000975-2-tps-106-96.png",
+    "description": "Funds are safely deposited directly to your bank account on a weekly basis"
+  },
+  {
+    "_id": 5,
+    "title": "Marketing Tools",
+    "img": "https://i.ibb.co/Jqpq4rj/O1-CN01b-PXfx-S1-P6-K7i-Hf-DVy-6000000001791-2-tps-97-87.png",
+    "description": "Find new customers & grow more with advertising and our whole range of marketing tools"
+  },
+  {
+    "_id": 6,
+    "title": "Support&Training",
+    "img": "https://i.ibb.co/M67WtcW/O1-CN01x-FHAmn1-JNp-ZJ4ntpq-6000000001017-2-tps-82-74.png",
+    "description": "Learn all about ecommerce for free and get help with seller support and Daraz University"
+  }
+]

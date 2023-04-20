@@ -24,7 +24,7 @@ const PhoneStoresCardes = () => {
 
   return (
     <div className="mt-8">
-      <div className="font-serif text-center font-semibold text-orange-300 lg:px-10 md:px-6 sm:px-4 px-2 lg:text-3xl md:text-xl text-lg">
+      <div className="font-serif text-center font-semibold text-orange-500 lg:px-10 md:px-6 sm:px-4 px-2 lg:text-3xl md:text-xl text-lg">
         <h1>Choice The Best </h1>
       </div>
       <div className="flex items-center justify-center pb-4 ">
