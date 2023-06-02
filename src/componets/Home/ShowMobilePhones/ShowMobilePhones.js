@@ -27,7 +27,7 @@ const ShowMobilePhones = () => {
         <div className="  grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-col-1 lg:gap-x-3 sm:gap-x-2 gap-x-0 ">
           {phones?.map((phone) => (
             <div className="px-4  my-10 group " key={phone.id}>
-              <div className=" relative overflow-hidden w-full translate hover:-translate-y-2 transition-transform duration-700 ">
+              <div className=" relative overflow-hidden w-full cursor-pointer translate hover:-translate-y-2 transition-transform duration-700 ">
                 <img
                   className="border-2 rounded-lg lg:w-96 w-full xl:h-[250px] lg:h-[300px] md:h-[250px] sm:h-[200px] h-full "
                   src={phone?.img}

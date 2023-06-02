@@ -6,6 +6,8 @@ import PhoneStoresCardes from "./PhoneStoresCardes/PhoneStoresCardes";
 import CarouselBanner from "./ServiceCenter/CarouselBanner";
 import WhySell from "./ServiceCenter/WhySell";
 import ShowMobilePhones from "./ShowMobilePhones/ShowMobilePhones";
+import DiscountPurches from "./ShowMobilePhones/DiscountPurches";
+import FeaturedDeals from "./Featured Deals/FeaturedDeals";
 
 const Home = () => {
   UseTitle("Home");
@@ -16,6 +18,8 @@ const Home = () => {
       <WhySell />
       <PhoneStoresCardes></PhoneStoresCardes>
       <ShowMobilePhones />
+      <DiscountPurches />
+      <FeaturedDeals />
       <PhoneReviews></PhoneReviews>
       <AdvertiseMobileLogo></AdvertiseMobileLogo>
     </div>

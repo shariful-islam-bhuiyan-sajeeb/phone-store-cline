@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "360 deg product",
+    "img": "https://i.ibb.co/hmxtXV7/download.jpg",
+    "price": "144.00",
+    "addToCard": "add to Card",
+    "Expire": "Expired",
+    "description": "Remains until the end of the offer"
+  },
+  {
+    "id": 2,
+    "title": "The Air Scoop-Neck Tee",
+    "img": "https://i.ibb.co/vcYyrM6/images.jpg",
+    "price": "100.00",
+    "addToCard": "Read more",
+    "Expire": "Expired",
+    "description": "Remains until the end of the offer"
+  },
+  {
+    "id": 3,
+    "title": "Beaded double Camera",
+    "img": "https://i.ibb.co/7bm04xy/images.jpg",
+    "price": "95.00",
+    "addToCard": "Add to card",
+    "Expire": "Expired",
+    "description": "Remains until the end of the offer"
+  }
+]
