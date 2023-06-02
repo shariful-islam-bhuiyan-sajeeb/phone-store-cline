@@ -81,7 +81,7 @@ const Navbar = () => {
           <Link className="" onClick={handleLogOut}>
             <a
               href="#_"
-              className="px-5  relative rounded group overflow-hidden font-medium bg-purple-50 text-purple-600 inline-block"
+              className="px-5  relative rounded group overflow-hidden font-medium bg-purple-50 text-black inline-block"
             >
               <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90"></span>
               <span className="relative group-hover:text-white">Logout</span>
@@ -92,7 +92,7 @@ const Navbar = () => {
         <Link className="" to="/login">
           <a
             href="#_"
-            className="px-5  relative rounded group overflow-hidden font-medium bg-purple-50 text-purple-600 inline-block"
+            className="px-5  relative rounded group overflow-hidden font-medium bg-purple-50 text-black inline-block"
           >
             <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-purple-600 group-hover:h-full opacity-90"></span>
             <span className="relative group-hover:text-white">Login</span>
@@ -106,7 +106,7 @@ const Navbar = () => {
     <div className="w-full">
       <div
         className={`flex md:flex-row flex-col items-center justify-around fixed z-50 top-0  w-full mx-auto  lg:py-2 md:py-4 sm:py-2 py-1  ${
-          navbar ? "bg-slate-300 bg-opacity-70 text-black" : "bg-transparent"
+          navbar ? "bg-slate-200 bg-opacity-70 text-black" : "bg-transparent"
         }`}
       >
         <div className="flex items-center">
@@ -144,7 +144,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex item-center text-right lg:mr-8 md:mr-10 xl:text-3xl md:text-lg text-md font-serif    ">
-          <ul className="menu menu-horizontal hidden md:flex   md:gap-x-8 sm:gap-x-4 gap-x-2 ">
+          <ul className="menu menu-horizontal hidden md:flex   md:gap-x-8 sm:gap-x-4 gap-x-2 font-serif ">
             {menuItems}
           </ul>
         </div>

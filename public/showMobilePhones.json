@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Samsung G516 Model",
+    "img": "https://i.ibb.co/zVDfN5d/galaxy-s21-ultra-12.webp",
+    "price": "22000/="
+  },
+  {
+    "id": 2,
+    "title": "Vivo S6 Model",
+    "img": "https://i.ibb.co/cFZMzQN/csm-IMG-20211213-12133657-97dc6417fd.jpg",
+    "price": "28000/="
+  },
+  {
+    "id": 3,
+    "title": "Samsung Galaxy A53 ",
+    "img": "https://i.ibb.co/Br3vNJX/images.jpg",
+    "price": "38000/="
+  },
+  {
+    "id": 4,
+    "title": "Samsung Galaxy SA ",
+    "img": "https://i.ibb.co/1GdHNQN/images.jpg",
+    "price": "33000/="
+  },
+  {
+    "id": 5,
+    "title": "Samsung Galaxy S21+ ",
+    "img": "https://i.ibb.co/GVQ6SXk/images.jpg",
+    "price": "13000/="
+  },
+  {
+    "id": 6,
+    "title": "Samsung Galaxy S21+ ",
+    "img": "https://i.ibb.co/hHJMJ4P/images.jpg",
+    "price": "13000/="
+  },
+  {
+    "id": 7,
+    "title": "Samsung Galaxy A9 ",
+    "img": "https://i.ibb.co/Snx5zVx/images.jpg",
+    "price": "33000/="
+  },
+  {
+    "id": 8,
+    "title": "Samsung Galaxy A921 ",
+    "img": "https://i.ibb.co/Cs66k6s/images.jpg",
+    "price": "22000/="
+  }
+]

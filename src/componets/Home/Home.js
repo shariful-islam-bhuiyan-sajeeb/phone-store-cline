@@ -1,11 +1,11 @@
 import React from "react";
 import UseTitle from "../Hook/UseTitle/UseTitle";
 import AdvertiseMobileLogo from "./AdvertiseMobileLogo/AdvertiseMobileLogo";
-import Banner from "./Banner/Banner";
 import PhoneReviews from "./PhoneReviews/PhoneReviews";
 import PhoneStoresCardes from "./PhoneStoresCardes/PhoneStoresCardes";
 import CarouselBanner from "./ServiceCenter/CarouselBanner";
 import WhySell from "./ServiceCenter/WhySell";
+import ShowMobilePhones from "./ShowMobilePhones/ShowMobilePhones";
 
 const Home = () => {
   UseTitle("Home");
@@ -15,6 +15,7 @@ const Home = () => {
       <CarouselBanner />
       <WhySell />
       <PhoneStoresCardes></PhoneStoresCardes>
+      <ShowMobilePhones />
       <PhoneReviews></PhoneReviews>
       <AdvertiseMobileLogo></AdvertiseMobileLogo>
     </div>
