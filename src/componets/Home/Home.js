@@ -17,7 +17,7 @@ const Home = () => {
     <div className="max-w-[1440px] mx-auto ">
       {/* <Banner></Banner> */}
       <CarouselBanner />
-      <WhySell />
+
       <PhoneStoresCardes></PhoneStoresCardes>
       <ShowMobilePhones />
       <DiscountPurches />
@@ -25,6 +25,7 @@ const Home = () => {
       <TvAudio />
       <PhoneReviews></PhoneReviews>
       <OurTeam />
+      <WhySell />
       <AdvertiseMobileLogo></AdvertiseMobileLogo>
     </div>
   );
