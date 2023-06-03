@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "category": "Samsung Neo QLED 8K",
+    "title": "Save up to $500",
+    "img": "https://i.ibb.co/nPKQ114/maxresdefault.jpg",
+    "button": "Buy now",
+    "description": "Explore a universe of 8K clarity with the Samsung Neo QLED 8K QN900C."
+  },
+  {
+    "id": 2,
+    "category": " The Terrace",
+    "title": "Sunglasses not included",
+    "img": "https://i.ibb.co/BzfBBQt/Samsung-8-K-QLED-TV-South-Korea-Launch.jpg",
+    "button": "Buy now",
+    "description": "Save up to $4,000 plus installation is on us with The Terrace."
+  },
+  {
+    "id": 3,
+    "category": " Ultra Slim Soundbar",
+    "title": "Save $250 off an Ultra Slim Soundbar",
+    "img": "https://i.ibb.co/FHsjBdd/LG-GX-Soundbar-2.webp",
+    "button": "Buy now",
+    "description": "Plus, get a Customizable Bezel in brown on us."
+  }
+]

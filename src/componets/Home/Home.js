@@ -8,6 +8,8 @@ import WhySell from "./ServiceCenter/WhySell";
 import ShowMobilePhones from "./ShowMobilePhones/ShowMobilePhones";
 import DiscountPurches from "./ShowMobilePhones/DiscountPurches";
 import FeaturedDeals from "./Featured Deals/FeaturedDeals";
+import OurTeam from "./Our Team/OurTeam";
+import TvAudio from "./TV & Audio/TvAudio";
 
 const Home = () => {
   UseTitle("Home");
@@ -20,7 +22,9 @@ const Home = () => {
       <ShowMobilePhones />
       <DiscountPurches />
       <FeaturedDeals />
+      <TvAudio />
       <PhoneReviews></PhoneReviews>
+      <OurTeam />
       <AdvertiseMobileLogo></AdvertiseMobileLogo>
     </div>
   );
