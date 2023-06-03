@@ -19,8 +19,8 @@ const TvAudio = () => {
               onClick={() => setActive("FirstCard")}
               className={({ isActive }) =>
                 isActive
-                  ? "lg:text-xl sm:text-lg text-md  hover:bg-white hover:border hover:border-dotted border-black lg:px-3 sm:px-2 px-1 lg:py-2 py-1 rounded-xl transition-all duration-300"
-                  : "text-red-500"
+                  ? "lg:text-xl sm:text-lg text-md   hover:bg-white hover:border hover:border-dotted border-black lg:px-3 sm:px-2 px-1 lg:py-2 py-1 rounded-xl transition-all duration-300"
+                  : "text-red-500 transition-all"
               }
               to="/"
             >
@@ -30,7 +30,7 @@ const TvAudio = () => {
               onClick={() => setActive("SecondCard")}
               className={({ isActive }) =>
                 isActive
-                  ? "lg:text-xl sm:text-lg text-md  hover:bg-white hover:border hover:border-dotted border-black lg:px-3 sm:px-2 px-1 lg:py-2 py-1 rounded-xl transition-all duration-300"
+                  ? "lg:text-xl sm:text-lg text-md   hover:bg-white hover:border hover:border-dotted border-black lg:px-3 sm:px-2 px-1 lg:py-2 py-1 rounded-xl transition-all duration-300"
                   : "text-red-500 transition-all"
               }
               to="/"

@@ -6,10 +6,19 @@ import { TbDeviceCctv } from "react-icons/tb";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { HiDeviceTablet, HiPhone } from "react-icons/hi2";
 // import footer from "../../Assets/footer background img.jpg";
+import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   return (
     <div>
+      <ScrollToTop
+        smooth
+        top="1000"
+        color="#0ea5e9"
+        className="flex items-center justify-center"
+        viewBox="0 0 16 16"
+        svgPath="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+      />
       <div className="footer footer-center  mt-10  text-base-content rounded">
         <div className=" w-full xl:max-w-[2540px]  mx-auto relative 2xl:mt-52 xl:mt-44 bg-[#252d35]  lg:mt-32 sm:mt-20 mt-16">
           <div className="absolute 2xl:-top-28 xl:-top-20 lg:-top-16 md:-top-14 sm:-top-10 -top-5 right-0 left-0  z-0 w-full ">
