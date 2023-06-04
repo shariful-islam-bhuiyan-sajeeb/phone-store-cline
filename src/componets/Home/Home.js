@@ -10,6 +10,7 @@ import DiscountPurches from "./ShowMobilePhones/DiscountPurches";
 import FeaturedDeals from "./Featured Deals/FeaturedDeals";
 import OurTeam from "./Our Team/OurTeam";
 import TvAudio from "./TV & Audio/TvAudio";
+import MarqueeCardAnimation from "./Marquee Animaiton/MarqueeCardAnimation";
 
 const Home = () => {
   UseTitle("Home");
@@ -23,6 +24,7 @@ const Home = () => {
       <DiscountPurches />
       <FeaturedDeals />
       <TvAudio />
+      <MarqueeCardAnimation />
       <PhoneReviews></PhoneReviews>
       <OurTeam />
       <WhySell />

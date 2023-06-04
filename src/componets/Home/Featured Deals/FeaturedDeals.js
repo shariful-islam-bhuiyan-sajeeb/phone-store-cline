@@ -17,7 +17,7 @@ const FeaturedDeals = () => {
   }, []);
   return (
     <div>
-      <div className="flex lg:flex-row flex-col items-start gap-x-2">
+      <div className="flex lg:flex-row flex-col items-start xl:gap-x-4 lg:gap-x-3 gap-x-2">
         <div className="lg:w-1/5 w-full mx-auto mt-4">
           <div className=" flex items-center px-3 text-right lg:justify-between justify-around    ">
             <h2 className="xl:text-xl lg:text:lg text-md font-serif font-semibold">

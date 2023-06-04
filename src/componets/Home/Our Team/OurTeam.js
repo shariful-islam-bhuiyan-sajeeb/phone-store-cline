@@ -15,8 +15,9 @@ const OurTeam = () => {
       </div>
       {/* ================= card section ==============  */}
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:mt-8 lg:mt-4 mt-2 lg:gap-x-4 sm:gap-x-3 gap-x-0 gap-y-5">
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center overflow-hidden ">
           <img
+            className="ease-in-out duration-700 transform hover:scale-125"
             src="https://pneupress.aislinthemes.com/app/uploads/2019/03/team_02-390x260.png"
             alt=""
           />
@@ -36,8 +37,9 @@ const OurTeam = () => {
         </div>
 
         {/* card section-2  */}
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center overflow-hidden ">
           <img
+            className="ease-in-out duration-500 transform hover:scale-125"
             src="https://pneupress.aislinthemes.com/app/uploads/2019/03/team_03-390x260.png"
             alt=""
           />
@@ -57,8 +59,9 @@ const OurTeam = () => {
         </div>
         {/* card section -3  */}
 
-        <div className="flex flex-col items-center ">
+        <div className="flex flex-col items-center overflow-hidden ">
           <img
+            className="ease-in-out duration-500 transform hover:scale-125"
             src="https://pneupress.aislinthemes.com/app/uploads/2019/03/team_01-390x260.png"
             alt=""
           />
