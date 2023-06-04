@@ -84,7 +84,7 @@ const FeaturedDeals = () => {
                     src={phone?.img}
                     alt=""
                   />
-                  <div className="absolute  w-full h-full  flex items-end justify-center bg-black/20   group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ">
+                  <div className="absolute  w-full h-full  flex items-end justify-center bg-black/40   group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ">
                     <button className="text-white bg-black w-full px-4 py-1 lg:text-lg text-md font-serif">
                       Add to card
                     </button>
